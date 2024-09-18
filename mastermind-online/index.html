@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+    <meta charset="UTF-8">
+    <script src="index.js"></script>
+    <title>Main page</title>
+</head>
+<body>
+    <h1>Mastermind game</h1>
+    <div id="right-1"><a href="login.html">Login</a></div>
+    <div id="left">
+        <input type="button" id="btn" onclick="difficultyChoose()" value="ZAGRAJ">
+        <div class="box">
+            <label for="difficulty" id="choose">Choose difficulty:</label>
+            <select name="difficulty" id="difficulty">
+              <option value="hard">Hard</option>
+              <option value="easy">Easy</option>
+            </select>
+        </div>
+    </div>
+   
+    <div id="right">
+        <h2>Game rules</h2>
+        <ol>
+            <li>The game is about guessing the generated color code</li>
+            <li>When any of the colors are in the right place a black marker will appear on the right</li>
+            <li>When any of the colors are in the wrong place a white marker will appear on the right</li>
+        </ol>
+    </div>
+</body>
+</html>

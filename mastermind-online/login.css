@@ -1,0 +1,48 @@
+body
+{
+    background-color: #007e77;
+    cursor: pointer;
+}
+h1
+{
+    font-size:60px;
+    text-align: center;
+    font-family: bahnschrift;
+}
+#main
+{
+    font-size:35px;
+    font-family: bahnschrift;
+    margin-left:100px;
+    justify-content: center;
+}
+input{
+    -webkit-appearance: none;
+    width: 40%;
+    border: 0;
+    font-family: bahnschrift;
+    padding: 0;
+    height: 48px;
+    font-size: 30px;
+    font-weight: 500;
+    background: #165754;
+    border-radius: 0;
+    color: black;
+    transition: all .15s ease;
+    margin-top: 10px;
+}
+#btn
+{
+    margin-top: 30px;
+    width: 250px;
+    height: 70px;
+    border: 6px solid white;
+    background-color:#007e77;
+    color: white;
+    padding: 14px 28px;
+    font-size: 30px;
+    font-family: bahnschrift;
+    border-radius: 10px 10px;
+    cursor: pointer;
+}
+

@@ -1,0 +1,177 @@
+body
+{
+    background-color: #007e77;
+    cursor: pointer;
+    font-family: bahnschrift;
+}
+h1
+{
+    font-size:60px;
+    text-align: center;
+
+}
+#color-block
+{
+    justify-content: center;
+    margin-left: 200px;
+}
+#number-block
+{
+    float: left;
+    margin-top: -31px;
+    margin-left: 30px;
+    text-align: center;
+}
+#check-block
+{
+    float: left;
+    margin-left: 30px;
+    margin-right: 35px;
+}
+#result-block
+{
+    float: left;
+    margin-right: 10px;
+}
+#menu
+{
+    float: left;
+    margin-left: 50px;
+}
+    .btn-check
+    {
+        border: 6px solid white;
+        background-color: #007e77;
+        color: white;
+        width:200px;
+        padding: 14px;
+        font-size: 30px;
+        font-family: bahnschrift;
+        font-weight: 900;
+        border-radius: 40px 10px;
+        cursor: pointer;
+        margin-left : 25px;
+        margin-bottom : 40px;
+    }
+
+.color
+{
+    margin-bottom: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid black;
+    box-shadow: -6px 6px black;
+    cursor: pointer;
+}
+.color:hover
+{
+    border: 3px solid black;
+}
+    .colorTop-hard
+    {
+        margin-top: 98px;
+    }
+    .colorTop-easy
+    {
+        margin-top: 190px;
+    }
+    #saddlebrown
+    {
+        background-color: saddlebrown;
+    }
+    #red
+    {
+        background-color: red;
+    }
+    #orange
+    {
+        background-color: orange;
+    }
+    #yellow
+    {
+        background-color: yellow;
+    }
+    #green
+    {
+        background-color: green;
+    }
+    #blue
+    {
+        background-color: blue;
+    }
+    #purple
+    {
+        background-color: purple;
+    }
+
+.number
+{
+    font-size: 30px;
+    font-family: bahnschrift;
+    margin-bottom: -11px;
+}
+
+.check-div
+{
+    margin-bottom: 25px;
+}
+.result-div
+{
+    margin-bottom: 15px;
+}
+    #r1
+    {
+        margin-top: -8px;
+    }
+    .result-left
+    {
+        float: left;
+    }
+    .result-middle
+    {
+        margin-top: 12px;
+    }
+.check
+{
+    background-color: #007e77;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 3px solid black;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+.check:hover
+{
+    background-color: #005d66;
+    border: 3px solid rgb(11, 179, 11);
+    
+}
+.result
+{
+    background-color: #007e77;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid white;
+    cursor: pointer;
+}
+p{
+    font-size: 40px;
+    font-family: bahnschrift;
+    margin-bottom:-3px;
+}
+
+#cc
+{
+    margin-top:-35px;
+    text-align: center;
+    margin-right: 48px;
+
+}
+
+#content{
+    display: flex;
+    justify-content: center;
+}

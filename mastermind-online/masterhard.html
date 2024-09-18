@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="master.css">
+        <script src="masterhard.js"></script>
+        <meta charset="utf-8">
+    </head>
+    <body onload="startApp(), generateCode()">
+        <h1>Mastermind game</h1>
+        <div id="content">
+            <div id="color-block">
+                <div><input type="button" id="saddlebrown" class="color colorTop-hard" onclick="getColor('saddlebrown')"></div>
+                <div><input type="button" id="red" class="color" onclick="getColor('red')"></div>
+                <div><input type="button" id="orange" class="color" onclick="getColor('orange')"></div>
+                <div><input type="button" id="yellow" class="color" onclick="getColor('yellow')"></div>
+                <div><input type="button" id="green" class="color" onclick="getColor('green')"></div>
+                <div><input type="button" id="blue" class="color" onclick="getColor('blue')"></div>
+                <div><input type="button" id="purple" class="color" onclick="getColor('purple')"></div>
+            </div>
+            <div id="number-block">
+                <p class="number">1</p>
+                <p class="number">2</p>
+                <p class="number">3</p>
+                <p class="number">4</p>
+                <p class="number">5</p>
+                <p class="number">6</p>
+                <p class="number">7</p>
+                <p class="number">8</p>
+                <p class="number">9</p>
+                <p class="number">10</p>
+                <p class="number">11</p>
+                <p class="number">12</p>
+            </div>
+            <div id="check-block">
+                <div id="c1" class="check-div">
+                    <input type="button" id="i1-c1" class="check" onclick="setColor('i1-c1')">
+                    <input type="button" id="i2-c1" class="check" onclick="setColor('i2-c1')">
+                    <input type="button" id="i3-c1" class="check" onclick="setColor('i3-c1')">
+                    <input type="button" id="i4-c1" class="check" onclick="setColor('i4-c1')">
+                    <input type="button" id="i5-c1" class="check" onclick="setColor('i5-c1')">
+                </div>
+                <div id="c2" class="check-div">
+                    <input type="button" id="i1-c2" class="check" onclick="setColor('i1-c2')" disabled>
+                    <input type="button" id="i2-c2" class="check" onclick="setColor('i2-c2')" disabled>
+                    <input type="button" id="i3-c2" class="check" onclick="setColor('i3-c2')" disabled>
+                    <input type="button" id="i4-c2" class="check" onclick="setColor('i4-c2')" disabled>
+                    <input type="button" id="i5-c2" class="check" onclick="setColor('i5-c2')" disabled>
+                </div>
+                <div id="c3" class="check-div">
+                    <input type="button" id="i1-c3" class="check" onclick="setColor('i1-c3')" disabled>
+                    <input type="button" id="i2-c3" class="check" onclick="setColor('i2-c3')" disabled>
+                    <input type="button" id="i3-c3" class="check" onclick="setColor('i3-c3')" disabled>
+                    <input type="button" id="i4-c3" class="check" onclick="setColor('i4-c3')" disabled>
+                    <input type="button" id="i5-c3" class="check" onclick="setColor('i5-c3')" disabled>
+                </div>
+                <div id="c4" class="check-div">
+                    <input type="button" id="i1-c4" class="check" onclick="setColor('i1-c4')" disabled>
+                    <input type="button" id="i2-c4" class="check" onclick="setColor('i2-c4')" disabled>
+                    <input type="button" id="i3-c4" class="check" onclick="setColor('i3-c4')" disabled>
+                    <input type="button" id="i4-c4" class="check" onclick="setColor('i4-c4')" disabled>
+                    <input type="button" id="i5-c4" class="check" onclick="setColor('i5-c4')" disabled>
+                </div>
+                <div id="c5" class="check-div">
+                    <input type="button" id="i1-c5" class="check" onclick="setColor('i1-c5')" disabled>
+                    <input type="button" id="i2-c5" class="check" onclick="setColor('i2-c5')" disabled>
+                    <input type="button" id="i3-c5" class="check" onclick="setColor('i3-c5')" disabled>
+                    <input type="button" id="i4-c5" class="check" onclick="setColor('i4-c5')" disabled>
+                    <input type="button" id="i5-c5" class="check" onclick="setColor('i5-c5')" disabled>
+                </div>
+                <div id="c6" class="check-div">
+                    <input type="button" id="i1-c6" class="check" onclick="setColor('i1-c6')" disabled>
+                    <input type="button" id="i2-c6" class="check" onclick="setColor('i2-c6')" disabled>
+                    <input type="button" id="i3-c6" class="check" onclick="setColor('i3-c6')" disabled>
+                    <input type="button" id="i4-c6" class="check" onclick="setColor('i4-c6')" disabled>
+                    <input type="button" id="i5-c6" class="check" onclick="setColor('i5-c6')" disabled>
+                </div>
+                <div id="c7" class="check-div">
+                    <input type="button" id="i1-c7" class="check" onclick="setColor('i1-c7')" disabled>
+                    <input type="button" id="i2-c7" class="check" onclick="setColor('i2-c7')" disabled>
+                    <input type="button" id="i3-c7" class="check" onclick="setColor('i3-c7')" disabled>
+                    <input type="button" id="i4-c7" class="check" onclick="setColor('i4-c7')" disabled>
+                    <input type="button" id="i5-c7" class="check" onclick="setColor('i5-c7')" disabled>
+                </div>
+                <div id="c8" class="check-div">
+                    <input type="button" id="i1-c8" class="check" onclick="setColor('i1-c8')" disabled>
+                    <input type="button" id="i2-c8" class="check" onclick="setColor('i2-c8')" disabled>
+                    <input type="button" id="i3-c8" class="check" onclick="setColor('i3-c8')" disabled>
+                    <input type="button" id="i4-c8" class="check" onclick="setColor('i4-c8')" disabled>
+                    <input type="button" id="i5-c8" class="check" onclick="setColor('i5-c8')" disabled>
+                </div>
+                <div id="c9" class="check-div">
+                    <input type="button" id="i1-c9" class="check" onclick="setColor('i1-c9')" disabled>
+                    <input type="button" id="i2-c9" class="check" onclick="setColor('i2-c9')" disabled>
+                    <input type="button" id="i3-c9" class="check" onclick="setColor('i3-c9')" disabled>
+                    <input type="button" id="i4-c9" class="check" onclick="setColor('i4-c9')" disabled>
+                    <input type="button" id="i5-c9" class="check" onclick="setColor('i5-c9')" disabled>
+                </div>
+                <div id="c10" class="check-div">
+                    <input type="button" id="i1-c10" class="check" onclick="setColor('i1-c10')" disabled>
+                    <input type="button" id="i2-c10" class="check" onclick="setColor('i2-c10')" disabled>
+                    <input type="button" id="i3-c10" class="check" onclick="setColor('i3-c10')" disabled>
+                    <input type="button" id="i4-c10" class="check" onclick="setColor('i4-c10')" disabled>
+                    <input type="button" id="i5-c10" class="check" onclick="setColor('i5-c10')" disabled>
+                </div>
+                <div id="c11" class="check-div">
+                    <input type="button" id="i1-c11" class="check" onclick="setColor('i1-c11')" disabled>
+                    <input type="button" id="i2-c11" class="check" onclick="setColor('i2-c11')" disabled>
+                    <input type="button" id="i3-c11" class="check" onclick="setColor('i3-c11')" disabled>
+                    <input type="button" id="i4-c11" class="check" onclick="setColor('i4-c11')" disabled>
+                    <input type="button" id="i5-c11" class="check" onclick="setColor('i5-c11')" disabled>
+                </div>
+                <div id="c12" class="check-div">
+                    <input type="button" id="i1-c12" class="check" onclick="setColor('i1-c12')" disabled>
+                    <input type="button" id="i2-c12" class="check" onclick="setColor('i2-c12')" disabled>
+                    <input type="button" id="i3-c12" class="check" onclick="setColor('i3-c12')" disabled>
+                    <input type="button" id="i4-c12" class="check" onclick="setColor('i4-c12')" disabled>
+                    <input type="button" id="i5-c12" class="check" onclick="setColor('i5-c12')" disabled>
+                </div>
+            </div>
+            <div id="result-block">
+                <div id="r1" class="result-div">
+                    <div class="result-left">
+                        <div><input type="button" id="i1-r1" class="result" disabled></div>
+                        <div><input type="button" id="i2-r1" class="result" disabled></div>
+                    </div>
+                    <div class="result-left"><input type="button" id="i3-r1" class="result result-middle" disabled></div>
+                    <div class="result-left">
+                        <div><input type="button" id="i4-r1" class="result" disabled></div>
+                        <div><input type="button" id="i5-r1" class="result" disabled></div>
+                    </div>
+                    <div style="clear:both"></div>              
+                </div>
+                <div id="r2" class="result-div">
+                    <div class="result-left">
+                        <div><input type="button" id="i1-r2" class="result" disabled></div>
+                        <div><input type="button" id="i2-r2" class="result" disabled></div>
+                    </div>
+                    <div class="result-left"><input type="button" id="i3-r2" class="result result-middle" disabled></div>
+                    <div class="result-left">
+                        <div><input type="button" id="i4-r2" class="result" disabled></div>
+                        <div><input type="button" id="i5-r2" class="result" disabled></div>
+                    </div>
+                    <div style="clear:both"></div>              
+                </div>
+                <div id="r3" class="result-div">
+                    <div class="result-left">
+                        <div><input type="button" id="i1-r3" class="result" disabled></div>
+                        <div><input type="button" id="i2-r3" class="result" disabled></div>
+                    </div>
+                    <div class="result-left"><input type="button" id="i3-r3" class="result result-middle" disabled></div>
+                    <div class="result-left">
+                        <div><input type="button" id="i4-r3" class="result" disabled></div>
+                        <div><input type="button" id="i5-r3" class="result" disabled></div>
+                    </div>
+                    <div style="clear:both"></div>    
+                </div>
+                <div id="r4" class="result-div">
+                    <div class="result-left">
+                        <div><input type="button" id="i1-r4" class="result" disabled></div>
+                        <div><input type="button" id="i2-r4" class="result" disabled></div>
+                    </div>
+                    <div class="result-left"><input type="button" id="i3-r4" class="result result-middle" disabled></div>
+                    <div class="result-left">
+                        <div><input type="button" id="i4-r4" class="result" disabled></div>
+                        <div><input type="button" id="i5-r4" class="result" disabled></div>
+                    </div>
+                    <div style="clear:both"></div>    
+                </div>
+                <div id="r5" class="result-div">
+                    <div class="result-left">
+                        <div><input type="button" id="i1-r5" class="result" disabled></div>
+                        <div><input type="button" id="i2-r5" class="result" disabled></div>
+                    </div>
+                    <div class="result-left"><input type="button" id="i3-r5" class="result result-middle" disabled></div>
+                    <div class="result-left">
+                        <div><input type="button" id="i4-r5" class="result" disabled></div>
+                        <div><input type="button" id="i5-r5" class="result" disabled></div>
+                    </div>
+                    <div style="clear:both"></div>    
+                </div>
+                <div id="r6" class="result-div">
+                    <div class="result-left">
+                        <div><input type="button" id="i1-r6" class="result" disabled></div>
+                        <div><input type="button" id="i2-r6" class="result" disabled></div>
+                    </div>
+                    <div class="result-left"><input type="button" id="i3-r6" class="result result-middle" disabled></div>
+                    <div class="result-left">
+                        <div><input type="button" id="i4-r6" class="result" disabled></div>
+                        <div><input type="button" id="i5-r6" class="result" disabled></div>
+                    </div>
+                    <div style="clear:both"></div>    
+                </div>
+                <div id="r7" class="result-div">
+                    <div class="result-left">
+                        <div><input type="button" id="i1-r7" class="result" disabled></div>
+                        <div><input type="button" id="i2-r7" class="result" disabled></div>
+                    </div>
+                    <div class="result-left"><input type="button" id="i3-r7" class="result result-middle" disabled></div>
+                    <div class="result-left">
+                        <div><input type="button" id="i4-r7" class="result" disabled></div>
+                        <div><input type="button" id="i5-r7" class="result" disabled></div>
+                    </div>
+                    <div style="clear:both"></div>    
+                </div>
+                <div id="r8" class="result-div">
+                    <div class="result-left">
+                        <div><input type="button" id="i1-r8" class="result" disabled></div>
+                        <div><input type="button" id="i2-r8" class="result" disabled></div>
+                    </div>
+                    <div class="result-left"><input type="button" id="i3-r8" class="result result-middle" disabled></div>
+                    <div class="result-left">
+                        <div><input type="button" id="i4-r8" class="result" disabled></div>
+                        <div><input type="button" id="i5-r8" class="result" disabled></div>
+                    </div>
+                    <div style="clear:both"></div>    
+                </div>
+                <div id="r9" class="result-div">
+                    <div class="result-left">
+                        <div><input type="button" id="i1-r9" class="result" disabled></div>
+                        <div><input type="button" id="i2-r9" class="result" disabled></div>
+                    </div>
+                    <div class="result-left"><input type="button" id="i3-r9" class="result result-middle" disabled></div>
+                    <div class="result-left">
+                        <div><input type="button" id="i4-r9" class="result" disabled></div>
+                        <div><input type="button" id="i5-r9" class="result" disabled></div>
+                    </div>
+                    <div style="clear:both"></div>    
+                </div>
+                <div id="r10" class="result-div">
+                    <div class="result-left">
+                        <div><input type="button" id="i1-r10" class="result" disabled></div>
+                        <div><input type="button" id="i2-r10" class="result" disabled></div>
+                    </div>
+                    <div class="result-left"><input type="button" id="i3-r10" class="result result-middle" disabled></div>
+                    <div class="result-left">
+                        <div><input type="button" id="i4-r10" class="result" disabled></div>
+                        <div><input type="button" id="i5-r10" class="result" disabled></div>
+                    </div>
+                    <div style="clear:both"></div>    
+                </div>
+                <div id="r11" class="result-div">
+                    <div class="result-left">
+                        <div><input type="button" id="i1-r11" class="result" disabled></div>
+                        <div><input type="button" id="i2-r11" class="result" disabled></div>
+                    </div>
+                    <div class="result-left"><input type="button" id="i3-r11" class="result result-middle" disabled></div>
+                    <div class="result-left">
+                        <div><input type="button" id="i4-r11" class="result" disabled></div>
+                        <div><input type="button" id="i5-r11" class="result" disabled></div>
+                    </div>
+                    <div style="clear:both"></div>    
+                </div>
+                <div id="r12" class="result-div">
+                    <div class="result-left">
+                        <div><input type="button" id="i1-r12" class="result" disabled></div>
+                        <div><input type="button" id="i2-r12" class="result" disabled></div>
+                    </div>
+                    <div class="result-left"><input type="button" id="i3-r12" class="result result-middle" disabled></div>
+                    <div class="result-left">
+                        <div><input type="button" id="i4-r12" class="result" disabled></div>
+                        <div><input type="button" id="i5-r12" class="result" disabled></div>
+                    </div>
+                    <div style="clear:both"></div>    
+                </div>
+            </div>
+            <div id="menu">
+                <input type="button" class="btn-check" id="notEmpty" value="Check!" onclick="notEmpty()">
+                <br>
+                <input type="button" class="btn-check" id="giveUp" value="Give up" onclick="giveUp()">
+                <br>
+                <input type="button" class="btn-check" id="back" value="Back" onclick="back()">
+            </div>
+        </div>
+        <div id="cc" class="check-div" hidden>
+            <p>Correct code:</p>
+            <input type="button" id="i1-cc" class="check" disabled>
+            <input type="button" id="i2-cc" class="check" disabled>
+            <input type="button" id="i3-cc" class="check" disabled>
+            <input type="button" id="i4-cc" class="check" disabled>
+            <input type="button" id="i5-cc" class="check" disabled>
+        </div>
+        
+    </body>
+</html>
